@@ -1,0 +1,4 @@
+numpy>=1.21
+opencv-python-headless>=4.5
+# matplotlib is only needed for plot_latency.py (offline plots), not the web UI:
+matplotlib>=3.4

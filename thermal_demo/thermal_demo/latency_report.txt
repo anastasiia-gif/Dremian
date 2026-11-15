@@ -1,0 +1,29 @@
+================================================================
+ THERMAL DETECTION — LATENCY REPORT
+================================================================
+ frames processed      : 300
+ platform              : laptop/PC (synthetic frame source)
+ capture stage is real : False
+
+ Per-stage latency:
+  capture(synth)     mean  7.212  median  6.988  p95  8.743  max 11.058  (ms)
+  detect             mean  6.573  median  6.355  p95  8.085  max 10.047  (ms)
+  track (Kalman)     mean  0.136  median  0.125  p95  0.196  max  0.430  (ms)
+  guide (PN)         mean  0.028  median  0.026  p95  0.040  max  0.095  (ms)
+
+ Algorithm latency (detect+track+guide) -- TRANSFERS TO HARDWARE:
+  ALGORITHM          mean  6.736  median  6.522  p95  8.297  max 10.328  (ms)
+
+ End-to-end per-frame latency (laptop, incl. synthetic capture):
+  END-TO-END         mean 13.948  median 13.629  p95 16.389  max 18.836  (ms)
+
+ first lock at frame   : 1
+ frames locked         : 299/300  (100%)
+ frames on-target(<8px): 299/299  (100%)
+ mean tracking error   : 1.49 px
+
+ HONEST CAVEAT: 'capture(synth)' is synthetic frame generation,
+ not the real camera. The ALGORITHM figure is what carries to the
+ Raspberry Pi; the real end-to-end must add the measured Caddx ->
+ ADV7280A -> V4L2 capture-chain delay (a hardware measurement, R1).
+================================================================
