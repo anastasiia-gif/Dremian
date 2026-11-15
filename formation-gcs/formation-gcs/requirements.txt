@@ -1,0 +1,5 @@
+# Core web server / websocket
+aiohttp>=3.9
+
+# Real MAVLink link (NOT needed for --sim)
+pymavlink>=2.4.40
